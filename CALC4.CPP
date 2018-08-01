@@ -210,7 +210,7 @@
     cout<<"\n\t\t Occasionally updated";
     cout<<"\n\t\t Last update: 01:17 PM, 09.04.2018 ";
     cout<<"\n\t\t Build name: calc4-stable-v4.97-09042018";
-    cout<<"\n\t\t New Build ID: dumbold-cppcalc-v0.1-01082018;
+    cout<<"\n\t\t New Build ID: dumbold-cppcalc-v0.1-01082018";
     cout<<"\n\n\t\t Developed by Krishna Moorthy A, XII D";
    }
 
