@@ -193,7 +193,7 @@
      ui_head();
     cout<<"\n\n\t\t\t ========= BUGS ========== ";
      cout<<"\n\t\t 1) Exit dialog loops.";
-     cout<<"\n\t\t 2) UI print designs misplacements.";
+     cout<<"\n\t\t 2) UI layout glitches.";
     cout<<"\n\n\t\t\t ========= CHANGE-LOG ========== ";
      cout<<"\n\t\t\t :::::::: VERSION 4.97 ::::::::";
      cout<<"\n\t\t # Feedback FC bug fixed, spaces can be used.";
@@ -204,12 +204,13 @@
     clrscr();
     ui_head();
     cout<<"\n\n\t\t\t ========= ABOUT ========== ";
-    cout<<"\n\n\t\t ARITHMATIC CALCULATOR";
+    cout<<"\n\n\t\t C++ CALCULATOR";
     cout<<"\n\t\t Version: 4.97";
     cout<<"\n\t\t Status: Stable";
     cout<<"\n\t\t Occasionally updated";
     cout<<"\n\t\t Last update: 01:17 PM, 09.04.2018 ";
     cout<<"\n\t\t Build name: calc4-stable-v4.97-09042018";
+    cout<<"\n\t\t New Build ID: dumbold-cppcalc-v0.1-01082018;
     cout<<"\n\n\t\t Developed by Krishna Moorthy A, XII D";
    }
 
