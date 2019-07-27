@@ -1,19 +1,21 @@
 
-  #include<iostream.h>
+  #include<iostream>
   #include<stdio.h>
   #include<conio.h>
   #include<math.h>
   #include<string.h>
 
-  static char feed[1][2000];
+  using namespace std;
 
-  long double a,b,c,d,sum,sub,diff,prod,quot,fact; long int x,y,div,remain;
+  static char feed[1][2000];
+  long double a,b,c,d,sum,sub,diff,prod,quot,fact;
+  long int x,y,div,remain;
   int clear=0;
   void ui_head()
   {
    cout<<"\n\t ==========================================================";
    cout<<"\n\t ======================= CALCULATOR =======================";
-   cout<<"\n\t ======================== VER 4.97 ========================";
+   cout<<"\n\t =======================  VER 6.00  =======================";
    cout<<"\n\t ==========================================================";
   }
 
@@ -22,7 +24,7 @@
    {
     long double nos,add,sum=0;
     int f=1;
-    clrscr();
+    // clrscr();
     ui_head();
     cout<<"\n\n\t\t       =========== ADDITION ===========";
     cout<<"\n\n\t\t How many numbers do you want to add? \t ";
@@ -35,22 +37,13 @@
      cin>>add;
      sum=sum+add;
     }
- /*   cin>>a;
-    cout<<"\t\t+ ";
-    cin>>b;
-    cout<<"\t\t+ ";
-    cin>>c;
-    cout<<"\t\t+ ";
-    cin>>d;
-
-    sum=a+b+c+d;    */
     cout<<"\t\t\t___________";
     cout<<"\n\t\t\t= "<<sum;
    }
 
-   void minus()
+   void differ()
    {
-    clrscr();
+    // clrscr();
     ui_head();
     cout<<"\n\n\t\t       =========== SUBTRACTION ===========";
     cout<<"\n\n\t\t  Enter your numbers: \n\n\t\t  ";
@@ -64,7 +57,7 @@
 
     void difference()
     {
-     clrscr();
+     // clrscr();
      ui_head();
      cout<<"\n\n\t\t       =========== DIFFERENCE ===========";
      cout<<"\n\n\n\t\t\t  Enter any two numbers..  \n\t\t\t  ";
@@ -86,7 +79,7 @@
     }
     void product()
     {
-     clrscr();
+     // clrscr();
      ui_head();
      cout<<"\n\n\t\t       =========== PRODUCT ===========";
      cout<<"\n\n\n\t  Enter any three numbers (Press 1 to skip a number)";
@@ -105,7 +98,7 @@
     void quotient()
 
      {
-      clrscr();
+      // clrscr();
       ui_head();
       cout<<"\n\n\t\t       =========== QUOTIENT ===========";
       cout<<"\n\n\n\t Enter the divident  ";
@@ -125,7 +118,7 @@
 
      void divide()
      {
-      clrscr();
+      // clrscr();
       ui_head();
       cout<<"\n\n\t        =========== QUOTIENT & REMAINDER ===========";
       cout<<"\n\n\n\t Enter the divident  ";
@@ -155,17 +148,21 @@
 
      void factorial()
      {
-      clrscr();
+      // clrscr();
       ui_head();
       cout<<"\n\n\t\t        =========== FACTORIAL ===========";
       long int n;
       cout<<"\n\n\t Enter a number to find its factorial...\n\t ";
       cin>>n;
-      cout<<"\n\t "<<n<<" x  ... x 1 = "<<factd(n);
+      cout<<"\n\t";
+      for (int i = n; i >= 2; i--){
+        cout<<i<<" x ";
+      }
+      cout<<"1 = "<<factd(n);
      }
    void feedback()
    {
-      clrscr();
+      // clrscr();
       ui_head();
       cout<<"\n\n\t\t\t ========= FEEDBACK ========== ";
       cout<<"\n\t Write your feedback here (2000 characters):\n\t\t ";
@@ -173,7 +170,7 @@
    }
    void view()
    {
-     clrscr();
+     // clrscr();
      cout<<"\n\n\t\t\t ========= FEEDBACK ========== ";
      cout<<"\n\n\t\t"<<feed[0];
      cout<<"\n\n\t Size of the feedback:"<<sizeof(feed)<<" KB";
@@ -189,35 +186,36 @@
    }
    void logs()
    {
-     clrscr();
+     // clrscr();
      ui_head();
     cout<<"\n\n\t\t\t ========= BUGS ========== ";
      cout<<"\n\t\t 1) Exit dialog loops.";
      cout<<"\n\t\t 2) UI layout glitches.";
     cout<<"\n\n\t\t\t ========= CHANGE-LOG ========== ";
-     cout<<"\n\t\t\t :::::::: VERSION 4.97 ::::::::";
+     cout<<"\n\t\t\t :::::::: VERSION 6.0 ::::::::";
      cout<<"\n\t\t # Feedback FC bug fixed, spaces can be used.";
-     cout<<"\n\t\t * NEW: Addition can be done for a predefined \n\t\t\tnumber of numbers.";
+     cout<<"\n\t\t * NEW: Bug fixes and combatibility improvement.";
+     cout<<"\n\t\t * NEW: Factorial function improvement.";
    }
    void about()
    {
-    clrscr();
+    // clrscr();
     ui_head();
     cout<<"\n\n\t\t\t ========= ABOUT ========== ";
     cout<<"\n\n\t\t C++ CALCULATOR";
-    cout<<"\n\t\t Version: 4.97";
+    cout<<"\n\t\t Version: 6.0";
     cout<<"\n\t\t Status: Stable";
-    cout<<"\n\t\t Occasionally updated";
-    cout<<"\n\t\t Last update: 01:17 PM, 09.04.2018 ";
-    cout<<"\n\t\t Build name: calc4-stable-v4.97-09042018";
-    cout<<"\n\t\t New Build ID: dumbold-cppcalc-v0.1-01082018";
-    cout<<"\n\n\t\t Developed by Krishna Moorthy A, XII D";
+    cout<<"\n\t\t Rarely updated";
+    cout<<"\n\t\t Last update: 18:04, 27.07.2019 ";
+    cout<<"\n\t\t Build name: calc4-stable-v6.0-07272019";
+    cout<<"\n\t\t Build ID: dumbold-cppcalc-v0.3-07272019";
+    cout<<"\n\n\t\t Developed by Krishna Moorthy A, BE CSE";
    }
 
    void operate(int ch=0)
    {
 
-    clrscr();
+    // clrscr();
     ui_head();
     cout<<"\n\n\t\t\t\t  WELCOME! ";
     cout<<"\n\n\t\t\t  CHOOSE AN OPERATION ";
@@ -245,7 +243,7 @@
      difference();
      break;
     case 3:
-     minus();
+     differ();
      break;
     case 4:
      product();
@@ -277,9 +275,9 @@
 
   }
  }
-    void main(int sc=0)
+    int main()
     {
-
+     int sc=0;
      operate();
      cout<<"\n\n\t  ====================================================== ";
      cout<<"\n\t |	 Do you want to continue to main screen?        |";

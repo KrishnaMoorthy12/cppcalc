@@ -1,0 +1,4 @@
+#assembled binaries
+
+*.o
+*.exe
